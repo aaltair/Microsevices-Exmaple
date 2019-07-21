@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>School.Services.Identity</name>
+    </assembly>
+    <members>
+        <member name="M:School.Services.Identity.Infrastructure.Abstracts.BaseRepository`1.Find(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Find entity by predicate.
+            </summary>
+            <param name="predicate">Predicate expression.</param>
+            <returns>IEnumerable collection of entities.</returns>
+        </member>
+        <member name="M:School.Services.Identity.Infrastructure.Abstracts.BaseRepository`1.AddRange(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Add range of entities.
+            </summary>
+            <param name="entities">IEnumerable collection of entities.</param>
+        </member>
+        <member name="M:School.Services.Identity.Infrastructure.Abstracts.BaseRepository`1.RemoveRange(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Remove range of entities.
+            </summary>
+            <param name="entities">IEnumerable collection of entities.</param>
+        </member>
+        <member name="M:School.Services.Identity.Infrastructure.Abstracts.BaseRepository`1.Count">
+            <summary>
+            Get entities count.
+            </summary>
+            <returns>Entities count.</returns>
+        </member>
+    </members>
+</doc>
