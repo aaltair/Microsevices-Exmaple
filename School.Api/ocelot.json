@@ -36,7 +36,11 @@
         }
       ],
       "UpstreamPathTemplate": "/courses-api/{API}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      }
 
 
 
@@ -51,11 +55,8 @@
         }
       ],
       "UpstreamPathTemplate": "/identity-api/{API}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "TestKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+  
 
     }
   ],
