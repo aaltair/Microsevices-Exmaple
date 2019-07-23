@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using School.Common.Event;
 using School.Common.Handler.Interfaces;
 using School.Common.RabbitMq;
+using School.Common.ServiceDiscovery;
 using School.Services.Identity.Extensions;
 using School.Services.Identity.Handler;
 
@@ -28,6 +29,7 @@ namespace School.Services.Identity
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            ConfigureConsul(services);
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDatabaseConfiguration(Configuration);
             services.AddIdentityConfiguration(Configuration);
@@ -54,5 +56,14 @@ namespace School.Services.Identity
       
             app.UseSwaggerConfig();
         }
+        private void ConfigureConsul(IServiceCollection services)
+        {
+            var serviceConfig = Configuration.GetServiceConfig();
+
+            services.RegisterConsulServices(serviceConfig);
+        }
+
     }
+
+
 }

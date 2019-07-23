@@ -3,12 +3,7 @@
     {
       "DownstreamPathTemplate": "/swagger/v1/swagger.json",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5001
-        }
-      ],
+      "ServiceName": "courses",
       "UpstreamPathTemplate": "/Courses/swagger.json",
       "UpstreamHttpMethod": [ "Get", "POST" ]
 
@@ -16,12 +11,7 @@
     {
       "DownstreamPathTemplate": "/swagger/v1/swagger.json",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5002
-        }
-      ],
+      "ServiceName": "identity",
       "UpstreamPathTemplate": "/identity/swagger.json",
       "UpstreamHttpMethod": [ "Get", "POST" ]
 
@@ -29,14 +19,12 @@
     {
       "DownstreamPathTemplate": "/api/{API}",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5001
-        }
-      ],
+      "ServiceName": "courses",
       "UpstreamPathTemplate": "/courses-api/{API}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "TestKey",
         "AllowedScopes": []
@@ -48,19 +36,18 @@
     {
       "DownstreamPathTemplate": "/api/{API}",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5002
-        }
-      ],
+      "ServiceName": "identity",
       "UpstreamPathTemplate": "/identity-api/{API}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
-  
+
 
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:5000"
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": 8500,
+      "Type": "Consul"
+    }
   }
 }

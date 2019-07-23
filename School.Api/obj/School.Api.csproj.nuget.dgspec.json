@@ -59,6 +59,7 @@
               "version": "[2.1.2, )"
             },
             "Microsoft.NETCore.App": {
+              "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
@@ -66,6 +67,10 @@
             "Ocelot": {
               "target": "Package",
               "version": "[13.5.1, )"
+            },
+            "Ocelot.Provider.Consul": {
+              "target": "Package",
+              "version": "[13.5.0, )"
             },
             "RawRabbit": {
               "target": "Package",
@@ -123,6 +128,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Consul": {
+              "target": "Package",
+              "version": "[0.7.0.3, )"
+            },
             "Microsoft.AspNetCore": {
               "target": "Package",
               "version": "[2.1.0, )"

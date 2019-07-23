@@ -16,3 +16,4 @@ C:\Users\aaltair\Desktop\Projects\Backend\School\School.Api\bin\Debug\netcoreapp
 C:\Users\aaltair\Desktop\Projects\Backend\School\School.Api\bin\Debug\netcoreapp2.1\School.Common.pdb
 C:\Users\aaltair\Desktop\Projects\Backend\School\School.Api\obj\Debug\netcoreapp2.1\School.Api.csproj.CopyComplete
 C:\Users\aaltair\Desktop\Projects\Backend\School\School.Api\bin\Debug\netcoreapp2.1\School.Api.xml
+C:\Users\aaltair\Desktop\Projects\Backend\School\School.Api\bin\Debug\netcoreapp2.1\ocelot.json

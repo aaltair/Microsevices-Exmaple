@@ -15,6 +15,7 @@ using School.Common.Command;
 using School.Common.Event;
 using School.Common.Handler.Interfaces;
 using School.Common.RabbitMq;
+using School.Common.ServiceDiscovery;
 using School.Services.Courses.Extensions;
 using School.Services.Courses.Handler;
 
@@ -25,6 +26,7 @@ namespace School.Services.Courses
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            
         }
 
         public IConfiguration Configuration { get; }
@@ -32,7 +34,7 @@ namespace School.Services.Courses
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
+            ConfigureConsul(services);
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDatabaseConfiguration(Configuration);
             services.AutoServiceRegister(Configuration);
@@ -63,5 +65,14 @@ namespace School.Services.Courses
                 .AllowCredentials()
             );
         }
+
+
+        private void ConfigureConsul(IServiceCollection services)
+        {
+            var serviceConfig = Configuration.GetServiceConfig();
+
+            services.RegisterConsulServices(serviceConfig);
+        }
+
     }
 }

@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Ocelot.Provider.Consul;
 using School.Api.Extentions;
 using School.Common.Event;
 using School.Common.Handler.Interfaces;
@@ -34,7 +35,7 @@ namespace School.Api
             services.AddRabbitMq(Configuration);
             services.AddSwaggerConfiguration(Configuration);
             services.AddAuthenticationConfiguration(Configuration);
-            services.AddOcelot(Configuration);
+            services.AddOcelot().AddConsul();
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",
