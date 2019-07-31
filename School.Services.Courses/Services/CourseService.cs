@@ -61,8 +61,10 @@ namespace School.Services.Courses.Services
             if (!authorValidator.Validate(courseDto).IsValid) throw new Exception("Empty_Null");
             Course course = _unitOfWork.CourseRepository.GetById(courseDto.CourseId) ?? throw new Exception("Not_Found");
             course.CourseName = courseDto.CourseName;
+            course.CourseNameEn = courseDto.CourseNameEn;
             course.AuthorId = courseDto.AuthorId;
             course.CourseCategory = courseDto.CourseCategory;
+            course.CourseCategoryEn = courseDto.CourseCategoryEn;
             course.UpdateOn = DateTime.Now;
             course.UpdateBy = currentUserId;
             _unitOfWork.CourseRepository.Update(course);

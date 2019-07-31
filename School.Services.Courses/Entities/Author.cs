@@ -10,6 +10,8 @@ namespace School.Services.Courses.Entities
         public int AuthorId { get; set; }
         [MaxLength(100)]
         public string AuthorName { get; set; }
+        [MaxLength(100)]
+        public string AuthorNameEn { get; set; }
         public ICollection<Course> Courses { set; get; }
         [MaxLength(100)]
         public string CreatedBy { get; set; }

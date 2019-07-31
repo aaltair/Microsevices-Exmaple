@@ -28,6 +28,9 @@ namespace School.Services.Courses.Migrations
                     b.Property<string>("AuthorName")
                         .HasMaxLength(100);
 
+                    b.Property<string>("AuthorNameEn")
+                        .HasMaxLength(100);
+
                     b.Property<string>("CreatedBy")
                         .HasMaxLength(100);
 
@@ -45,9 +48,7 @@ namespace School.Services.Courses.Migrations
                     b.ToTable("Authors");
 
                     b.HasData(
-                        new { AuthorId = 1, AuthorName = "Alaa Altair", CreatedOn = new DateTime(2019, 7, 18, 15, 19, 26, 787, DateTimeKind.Local), IsDelete = false },
-                        new { AuthorId = 2, AuthorName = "Ali Altair", CreatedOn = new DateTime(2019, 7, 18, 15, 19, 26, 795, DateTimeKind.Local), IsDelete = false },
-                        new { AuthorId = 3, AuthorName = "Ahmad Altair", CreatedOn = new DateTime(2019, 7, 18, 15, 19, 26, 795, DateTimeKind.Local), IsDelete = false }
+                        new { AuthorId = 1, AuthorName = "علاء عباس الطير", AuthorNameEn = "Alaa Abbas Altair", CreatedOn = new DateTime(2019, 7, 31, 9, 5, 14, 123, DateTimeKind.Local), IsDelete = false }
                     );
                 });
 
@@ -62,7 +63,13 @@ namespace School.Services.Courses.Migrations
                     b.Property<string>("CourseCategory")
                         .HasMaxLength(50);
 
+                    b.Property<string>("CourseCategoryEn")
+                        .HasMaxLength(50);
+
                     b.Property<string>("CourseName")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("CourseNameEn")
                         .HasMaxLength(50);
 
                     b.Property<string>("CreatedBy")
@@ -84,9 +91,9 @@ namespace School.Services.Courses.Migrations
                     b.ToTable("Courses");
 
                     b.HasData(
-                        new { CourseId = 1, AuthorId = 1, CourseCategory = "FullStack", CourseName = ".Net Core With React", CreatedOn = new DateTime(2019, 7, 18, 15, 19, 26, 796, DateTimeKind.Local), IsDelete = false },
-                        new { CourseId = 2, AuthorId = 2, CourseCategory = "FrontEnd", CourseName = "React With Redux", CreatedOn = new DateTime(2019, 7, 18, 15, 19, 26, 796, DateTimeKind.Local), IsDelete = false },
-                        new { CourseId = 3, AuthorId = 3, CourseCategory = "BackEnd", CourseName = ".Net Core WebApi", CreatedOn = new DateTime(2019, 7, 18, 15, 19, 26, 796, DateTimeKind.Local), IsDelete = false }
+                        new { CourseId = 1, AuthorId = 1, CourseCategory = "شامل", CourseCategoryEn = "FullStack", CourseName = "دوره (.Net Core With React) ", CourseNameEn = ".Net Core With React", CreatedOn = new DateTime(2019, 7, 31, 9, 5, 14, 132, DateTimeKind.Local), IsDelete = false },
+                        new { CourseId = 2, AuthorId = 1, CourseCategory = "تصمم وجهات", CourseCategoryEn = "FrontEnd", CourseName = "دوره (React With Redux)", CourseNameEn = "React With Redux", CreatedOn = new DateTime(2019, 7, 31, 9, 5, 14, 132, DateTimeKind.Local), IsDelete = false },
+                        new { CourseId = 3, AuthorId = 1, CourseCategory = "برمجه", CourseCategoryEn = "BackEnd", CourseName = "دوره (.Net Core WebApi)", CourseNameEn = ".Net Core WebApi", CreatedOn = new DateTime(2019, 7, 31, 9, 5, 14, 132, DateTimeKind.Local), IsDelete = false }
                     );
                 });
 

@@ -8,7 +8,9 @@ namespace School.Services.Courses.Services.Validators.Course
         public CreateCourseValidator()
         {
             RuleFor(w => w.CourseName).NotNull().NotEmpty();
+            RuleFor(w => w.CourseNameEn).NotNull().NotEmpty();
             RuleFor(w => w.CourseCategory).NotNull().NotEmpty();
+            RuleFor(w => w.CourseCategoryEn).NotNull().NotEmpty();
             RuleFor(w => w.AuthorId).NotNull().NotEmpty();
         }
     }

@@ -10,7 +10,11 @@ namespace School.Services.Courses.Entities
         [MaxLength(50)]
         public string CourseName { get; set; }
         [MaxLength(50)]
+        public string CourseNameEn{ get; set; }
+        [MaxLength(50)]
         public string CourseCategory { get; set; }
+        [MaxLength(50)]
+        public string CourseCategoryEn { get; set; }
         public int AuthorId { get; set; }
         public Author Author { set; get; }
         [MaxLength(50)]

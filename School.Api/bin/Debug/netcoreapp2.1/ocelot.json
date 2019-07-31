@@ -22,9 +22,6 @@
       "ServiceName": "courses",
       "UpstreamPathTemplate": "/courses-api/{API}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-      "LoadBalancerOptions": {
-        "Type": "RoundRobin"
-      },
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "TestKey",
         "AllowedScopes": []

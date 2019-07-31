@@ -36,26 +36,39 @@ namespace School.Services.Courses.Infrastructure.Contexts
         {
             builder.Entity<Author>().HasData(new Author[]
             {
-                new Author {AuthorId = 1, AuthorName = "Alaa Altair", CreatedOn = DateTime.Now},
-                new Author {AuthorId = 2, AuthorName = "Ali Altair", CreatedOn = DateTime.Now},
-                new Author {AuthorId = 3, AuthorName = "Ahmad Altair", CreatedOn = DateTime.Now},
+                new Author {AuthorId = 1,AuthorName = "علاء عباس الطير", AuthorNameEn = "Alaa Abbas Altair", CreatedOn = DateTime.Now},
+
             });
 
             builder.Entity<Course>().HasData(new Course[]
                 {
                     new Course
                     {
-                        CourseId = 1, CourseCategory = "FullStack", AuthorId = 1, CourseName = ".Net Core With React",
+                        CourseId = 1, CourseCategory = "شامل" ,
+                        CourseCategoryEn = "FullStack",
+                        AuthorId = 1,
+                        CourseNameEn = ".Net Core With React",
+                        CourseName = "دوره (.Net Core With React) ",
                         CreatedOn = DateTime.Now
                     },
                     new Course
                     {
-                        CourseId = 2, CourseCategory = "FrontEnd", AuthorId = 2, CourseName = "React With Redux",
+                        CourseId = 2,
+                        CourseCategory = "تصمم وجهات",
+                        CourseCategoryEn = "FrontEnd",
+                        AuthorId = 1,
+                        CourseNameEn = "React With Redux",
+                        CourseName = "دوره (React With Redux)",
                         CreatedOn = DateTime.Now
                     },
                     new Course
                     {
-                        CourseId = 3, CourseCategory = "BackEnd", AuthorId = 3, CourseName = ".Net Core WebApi",
+                        CourseId = 3,
+                        CourseCategory = "برمجه",
+                        CourseCategoryEn = "BackEnd",
+                        AuthorId = 1,
+                        CourseNameEn = ".Net Core WebApi",
+                        CourseName = "دوره (.Net Core WebApi)",
                         CreatedOn = DateTime.Now
                     },
                 }

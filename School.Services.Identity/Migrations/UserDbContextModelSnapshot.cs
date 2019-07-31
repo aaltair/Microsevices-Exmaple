@@ -43,7 +43,7 @@ namespace School.Services.Identity.Migrations
                     b.ToTable("AspNetRoles");
 
                     b.HasData(
-                        new { Id = "a386ad8f-00fb-4275-96fc-a80138418936", ConcurrencyStamp = "e5307edc-695e-44ae-a01f-0673415e83e9", Name = "SuperAdmin", NormalizedName = "SUPERADMIN" }
+                        new { Id = "b5a5dd9a-e2bf-4f97-955f-c085c03487a8", ConcurrencyStamp = "e00cb84a-18f4-4de2-bf0a-e106607d1b46", Name = "SuperAdmin", NormalizedName = "SUPERADMIN" }
                     );
                 });
 
@@ -118,7 +118,7 @@ namespace School.Services.Identity.Migrations
                     b.ToTable("AspNetUserRoles");
 
                     b.HasData(
-                        new { UserId = "30dc8675-96ef-4d48-9e4a-7621074e2f8b", RoleId = "a386ad8f-00fb-4275-96fc-a80138418936" }
+                        new { UserId = "e238b05c-7e5c-4967-9cc0-5f0cc3274187", RoleId = "b5a5dd9a-e2bf-4f97-955f-c085c03487a8" }
                     );
                 });
 
@@ -164,11 +164,13 @@ namespace School.Services.Identity.Migrations
 
                     b.Property<string>("FirstName");
 
-                    b.Property<string>("FullName");
+                    b.Property<string>("FirstNameEn");
 
                     b.Property<bool>("IsDelete");
 
                     b.Property<string>("LastName");
+
+                    b.Property<string>("LastNameEn");
 
                     b.Property<bool>("LockoutEnabled");
 
@@ -189,6 +191,8 @@ namespace School.Services.Identity.Migrations
                     b.Property<string>("ProfileImg");
 
                     b.Property<string>("SecondName");
+
+                    b.Property<string>("SecondNameEn");
 
                     b.Property<string>("SecurityStamp");
 
@@ -218,7 +222,7 @@ namespace School.Services.Identity.Migrations
                     b.ToTable("AspNetUsers");
 
                     b.HasData(
-                        new { Id = "30dc8675-96ef-4d48-9e4a-7621074e2f8b", AccessFailedCount = 0, Address = "Amman", BirthDate = new DateTime(1993, 1, 27, 0, 0, 0, 0, DateTimeKind.Unspecified), City = "Amman", ConcurrencyStamp = "c3a13505-c061-462a-8fb0-0c9238982d7a", CreatedOn = new DateTime(2019, 7, 18, 12, 24, 56, 50, DateTimeKind.Local), Email = "aaltair.developer@gmail.com", EmailConfirmed = true, FirstName = "Alaa", IsDelete = false, LastName = "Altair", LockoutEnabled = false, NormalizedEmail = "AALTAIR.DEVELOPER@GMAIL.COM", NormalizedUserName = "ADMIN", PasswordHash = "AQAAAAEAACcQAAAAEEun5v9k5vxUreDHdJ4G3HEkZw9okEo9hJ9NIUkd36q7v7s9PeQGP8/D6JJ8CBa8pg==", PhoneNumber = "+962788260020", PhoneNumberConfirmed = true, SecondName = "Abbas", SecurityStamp = "", TwoFactorEnabled = false, UserName = "admin" }
+                        new { Id = "e238b05c-7e5c-4967-9cc0-5f0cc3274187", AccessFailedCount = 0, Address = "Amman", BirthDate = new DateTime(1993, 1, 27, 0, 0, 0, 0, DateTimeKind.Unspecified), City = "Amman", ConcurrencyStamp = "5bfb1327-62ee-4787-8405-5e150a1f1c3c", CreatedOn = new DateTime(2019, 7, 30, 12, 18, 44, 760, DateTimeKind.Local), Email = "aaltair.developer@gmail.com", EmailConfirmed = true, FirstName = "علاء", FirstNameEn = "Alaa", IsDelete = false, LastName = "الطير", LastNameEn = "Altair", LockoutEnabled = false, NormalizedEmail = "AALTAIR.DEVELOPER@GMAIL.COM", NormalizedUserName = "ADMIN", PasswordHash = "AQAAAAEAACcQAAAAEJiNj9LwRPyDNuv3fHP3S9MNfRF78bcjx4b06MYzDXhBSUSZ/h08od5H2cK90HAA6Q==", PhoneNumber = "+962788260020", PhoneNumberConfirmed = true, SecondName = "عباس", SecondNameEn = "Abbas", SecurityStamp = "", TwoFactorEnabled = false, UserName = "admin" }
                     );
                 });
 

@@ -8,6 +8,7 @@ namespace School.Services.Courses.Services.Validators.Author
         public CreateAuthorValidator()
         {
             RuleFor(w => w.AuthorName).NotNull().NotEmpty();
+            RuleFor(w => w.AuthorNameEn).NotNull().NotEmpty();
         }
     }
 }

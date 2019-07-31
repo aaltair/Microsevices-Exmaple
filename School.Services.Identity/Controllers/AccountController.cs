@@ -134,6 +134,7 @@ namespace School.Services.Identity.Controllers
 
                 Id = user.Id,
                 FullName = user.FirstName + " " + user.SecondName + " " + user.LastName,
+                FullNameEn = user.FirstNameEn + " " + user.SecondNameEn + " " + user.LastNameEn,
                 ProfileImg = user.ProfileImg,
                 token = encodedJwt,
                 expiration = jwt.ValidTo,

@@ -31,9 +31,8 @@ namespace School.Services.Courses.Handler
                 Console.WriteLine(command.AuthorName);
          
                 var _authorService = scope.ServiceProvider.GetService<IAuthorService>();
-                Console.WriteLine("2");
                 var _mapper = scope.ServiceProvider.GetService<IMapper>();
-                Console.WriteLine("3");
+
                 try
                 {
                     var dto = _authorService.CreateAuthor(_mapper.Map<CreateAuthorCommand, CreateAuthorDto>(command),

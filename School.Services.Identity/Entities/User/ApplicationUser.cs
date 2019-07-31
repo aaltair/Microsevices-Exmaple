@@ -6,10 +6,12 @@ namespace School.Services.Identity.Entities.User
 {
     public class ApplicationUser : IdentityUser, IBaseEntity
     {
-        public string FullName { get; set; }
         public string FirstName { get; set; }
         public string SecondName { get; set; }
         public string LastName { get; set; }
+        public string FirstNameEn { get; set; }
+        public string SecondNameEn { get; set; }
+        public string LastNameEn { get; set; }
         public string ProfileImg { get; set; }
         public DateTime BirthDate { get; set; }
         public string Address { get; set; }
